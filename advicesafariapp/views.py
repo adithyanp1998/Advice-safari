@@ -231,6 +231,12 @@ def booking(request):
 
 
 
+@login_required
+def AddToCart(request):
+    products = Product.objects.all()  # Fetch all products
+    return render(request,'booking.html', {'products': products})
+
+
 
 
 
